@@ -1,0 +1,51 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo con imagen */
+body {
+  background: url("fondo.jpg") center center / cover no-repeat fixed;
+  color: #00ff80;
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-shadow: 0 0 6px #00ff80;
+}
+
+/* Capa semitransparente para mejorar la lectura */
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #00ff80;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 15px #00ff80;
+}
+
+/* Texto tipo terminal */
+.terminal-text {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: clamp(14px, 2.2vw, 20px);
+}
+
+/* Responsive móvil */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* mejora rendimiento móvil */
+    padding: 20px 10px;
+  }
+  .container {
+    padding: 20px;
+  }
+  .terminal-text {
+    font-size: clamp(16px, 4vw, 22px);
+  }
+}
