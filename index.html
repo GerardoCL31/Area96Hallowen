@@ -7,9 +7,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <button id="play-btn">🎧 Iniciar música</button>
+
+  <script>
+    const playBtn = document.getElementById('play-btn');
+    const music = document.getElementById('music');
+
+    playBtn.addEventListener('click', () => {
+      music.play();
+      playBtn.style.display = 'none'; // ocultar el botón después
+    });
+     </script>
   <div class="container">
     <pre class="terminal-text">
- <h2>OPERACIÓN: APOCALIPSIS NUCLEAR</h2>
+<h2>OPERACIÓN: APOCALIPSIS NUCLEAR</h2>
 <img src="calabaza.png" alt="calabaza" class="imagen-derecha">
 <b>OBJETIVOS</b>
   Humanos: activar la bomba nuclear y defenderla 15 minutos.
